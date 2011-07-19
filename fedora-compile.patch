@@ -1,0 +1,24 @@
+diff -uNdr openl2tp-1.8/Makefile openl2tp-1.8_0/Makefile
+--- openl2tp-1.8/Makefile	2010-11-22 12:47:26.000000000 +0300
++++ openl2tp-1.8_0/Makefile	2011-07-19 10:17:47.508008191 +0400
+@@ -154,7 +154,7 @@
+ 
+ CPPFLAGS=		$(CPPFLAGS.l2tptest) $(CPPFLAGS-y)
+ CFLAGS=			-I. -Iusl -Icli -isystem include \
+-				-MMD -Wall -Werror -Wno-strict-aliasing \
++				-MMD -Wall -Wno-strict-aliasing \
+ 				$(CPPFLAGS) $(CPPFLAGS.dmalloc) \
+ 				-DSYS_LIBDIR=$(SYS_LIBDIR)
+ LDFLAGS.l2tpd=		-Wl,-E -L. -Lusl -lusl -ldl $(LIBS.dmalloc) -lc
+diff -uNdr openl2tp-1.8/usl/Makefile openl2tp-1.8_0/usl/Makefile
+--- openl2tp-1.8/usl/Makefile	2010-11-04 19:27:08.000000000 +0300
++++ openl2tp-1.8_0/usl/Makefile	2011-07-19 10:28:02.859052662 +0400
+@@ -14,7 +14,7 @@
+ endif
+ 
+ CPPFLAGS+=		$(CFLAGS.optimize) -g
+-CFLAGS=			-I. -MMD -Wall -Werror -Wno-strict-aliasing $(CPPFLAGS) $(CPPFLAGS.dmalloc)
++CFLAGS=			-I. -MMD -Wall -Wno-strict-aliasing $(CPPFLAGS) $(CPPFLAGS.dmalloc)
+ 
+ .PHONY:			all test clean
+ 
